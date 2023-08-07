@@ -1,14 +1,29 @@
-<div class="main-container">
-    <mat-toolbar><span>Letterboxd Stats</span></mat-toolbar>
-    <div class="main-content">
-        <div class="upload-file-container">
-            <div class="upload-button-container">
-            <button class="upload-button" mat-fab (click)="fileUpload.click()">
-                <mat-icon class="upload-button-icon">upload_file</mat-icon>
-            </button>
-            <p>Upload Letterboxd Profile CSV</p>
-            {{fileName || "No file uploaded yet."}}
-        </div>
-    </div>
-    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload multiple>
-</div>
+<mat-toolbar><span>Letterboxd Stats</span></mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav opened mode="side">
+        <mat-nav-list>
+            <a mat-list-item class="side-nav-item"  routerLink="/Home" routerLinkActive="active-list-item">
+                <mat-icon class="side-nav-icon" matListIcon>home</mat-icon>
+                <span class="side-nav-text">Home</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item class="side-nav-item"  routerLink="/Films" routerLinkActive="active-list-item">
+                <mat-icon class="side-nav-icon" matListIcon>movie</mat-icon>
+                <span class="side-nav-text">Films</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item class="side-nav-item" routerLink="/Actors" routerLinkActive="active-list-item">
+                <mat-icon class="side-nav-icon" matListIcon>groups</mat-icon>
+                <span class="side-nav-text">Actors</span>
+            </a>
+            <mat-divider></mat-divider>
+            <a mat-list-item class="side-nav-item"  routerLink="/Directors" routerLinkActive="active-list-item">
+                <mat-icon class="side-nav-icon" matListIcon>video_camera_front</mat-icon>
+                <span class="side-nav-text">Directors</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

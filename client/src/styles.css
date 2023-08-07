@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Reset some default styles to improve the layout */
+
+  
+  
+  /* Main content styling */
+  .main-content {
+    flex: 1; /* Take the remaining space in the container */
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+    
+  }
+
+  /* Define the main container using CSS Flexbox */
+  .main-container {
+    height: 100vh;
+    background-color: #1A2026;
+    color: white;
+  }
+  
+
+   

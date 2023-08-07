@@ -12,13 +12,20 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-
-
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import { HomePageComponent } from './home-page/home-page.component';
+import { FilmsPageComponent } from './films-page/films-page.component';
+import { ActorsPageComponent } from './actors-page/actors-page.component';
+import { DirectorsPageComponent } from './directors-page/directors-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
+    FilmsPageComponent,
+    ActorsPageComponent,
+    DirectorsPageComponent,
     
   ],
   imports: [
@@ -32,6 +39,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
+    MatDividerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

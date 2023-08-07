@@ -1,0 +1,23 @@
+.file-input{
+    display: none;
+  }
+  
+  .upload-button{
+    width: 128px;
+    height: 128px; 
+   }
+
+   .upload-button-icon{
+    font-size: 56px; /* Adjust the icon size as needed */
+    width: 56px; /* Adjust the width to match the icon size */
+    height: 45px;
+    padding: 15px 30px;
+   }
+
+   .upload-file-container{
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }

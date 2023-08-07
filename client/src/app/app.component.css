@@ -1,53 +1,47 @@
-/* Reset some default styles to improve the layout */
-body, html {
-    margin: 0;
-    padding: 0;
-  }
+.mat-toolbar{
+  background-color: #14181C;
+  font-size: xx-large;
+}
 
-  .file-input{
-    display: none;
-  }
-  
-  /* Define the main container using CSS Flexbox */
-  .main-container {
-    height: 100vh;
-    background-color: #1A2026;
-    color: white;
-  }
-  
-  /* Main content styling */
-  .main-content {
-    flex: 1; /* Take the remaining space in the container */
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    padding: 20px;
-    
-  }
+.mat-sidenav {
+  width: 250px;
+  background-color: #14181C;
+}
 
-  .mat-toolbar{
-    background-color: #14181C;
-    font-size: xx-large;
-  }
+.side-nav-item:hover{
+  background-color: #14181C; 
+}
+.side-nav-item{
+  justify-content: middle;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: large;
+  text-decoration: none;
+  color: white;
+  vertical-align: bottom;
+}
+.side-nav-icon{
+  padding-right: 10px;
+  font-size: 24px; /* Adjust the icon size as needed */
+  width: 24px; /* Adjust the width to match the icon size */
+  height: 24px;
+  vertical-align: middle;
+}
+.side-nav-link{
+  font-size: large;
+  vertical-align: bottom;
+  text-decoration: none;
+  color: white;
+}
 
-  .upload-button{
-    width: 128px;
-    height: 128px; 
-   }
+.side-nav-text{
+  vertical-align: bottom;
+}
 
-   .upload-button-icon{
-    font-size: 56px; /* Adjust the icon size as needed */
-    width: 56px; /* Adjust the width to match the icon size */
-    height: 56px;
-    padding: 15px 30px;
-   }
+.active-list-item{
+  background-color: #1A2026;
+}
 
-   .upload-file-container{
-    padding-bottom: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-   }
+ .active-list-item span, .active-list-item .side-nav-icon { /*the color of the selected side nav item */
+  color: #00C030;
+}

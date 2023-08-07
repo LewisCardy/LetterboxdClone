@@ -1,0 +1,14 @@
+<div class="main-container">
+    <div class="main-content">
+        <div class="upload-file-container">
+            <div class="upload-button-container">
+            <button class="upload-button" mat-fab (click)="fileUpload.click()">
+                <mat-icon class="upload-button-icon">upload_file</mat-icon>
+            </button>
+            <p>Upload Letterboxd Profile CSV</p>
+            {{fileName || "No file uploaded yet."}}
+            </div>
+        </div>
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload multiple/>
+    </div>
+</div>
