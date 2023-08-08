@@ -18,6 +18,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FilmsPageComponent } from './films-page/films-page.component';
 import { ActorsPageComponent } from './actors-page/actors-page.component';
 import { DirectorsPageComponent } from './directors-page/directors-page.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +44,8 @@ import { DirectorsPageComponent } from './directors-page/directors-page.componen
     HttpClientModule,
     MatDividerModule,
     MatListModule,
+    MatProgressBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

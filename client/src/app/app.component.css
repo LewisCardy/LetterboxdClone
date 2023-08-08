@@ -3,6 +3,10 @@
   font-size: xx-large;
 }
 
+.mat-sidenav-container{
+  background-color: #1A2026;
+}
+
 .mat-sidenav {
   width: 250px;
   background-color: #14181C;

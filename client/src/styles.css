@@ -12,8 +12,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     flex: 1; /* Take the remaining space in the container */
     font-size: 24px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 90vh;
     padding: 20px;
     
