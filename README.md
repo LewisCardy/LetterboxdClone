@@ -1,2 +1,5 @@
-# LetterboxdClone
-A clone of the website Letterboxd to learn MERN web stack specifically Angular.
+# LetterboxdStats
+First project created with angualr and the MERN web stack to learn the framework.
+
+Web app used to graph and compare a user's Letterboxd account details.
+
