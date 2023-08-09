@@ -1,19 +1,21 @@
 <div class="main-container">
-    <h2 class="title">Upload Ratings Data</h2>
+    <h2 class="title">Ratings Data</h2>
+    <div class="underline"></div>
         <div class="file-upload-container">
-            <div class="file-upload">
+            <div class="file-upload ">
                 <div class="description-text">Select ratings.csv from downloaded Letterboxd account export</div>
                 <div class="browse-div">
                     <button mat-raised-button color="primary" class="browse-btn"
                         (click)="fileSelect.click()"> Browse
                     </button>
                     <p id="fileName">{{fileName || "No file uploaded yet."}}</p>
+                    <div>
+                        <button mat-raised-button color="primary" class="upload-btn"
+                            (click)="onFileUpload()"> Upload
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <button mat-raised-button color="primary" class="upload-btn"
-                        (click)="onFileUpload()"> Upload
-                    </button>
-                </div>
+                
             </div>
         </div>
     </div>

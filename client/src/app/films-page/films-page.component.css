@@ -11,7 +11,6 @@
     font-size: xx-large;
   }
   .file-upload-container{
-     /* Material grey color */
     display: flex;
     flex: 1;
     padding: 10px;
@@ -41,7 +40,7 @@
   .upload-btn{
     padding: 25px;
     font-size: x-large;
-    margin-right: 10px;
+    margin-left : 10px;
     
   }
 
@@ -57,7 +56,14 @@
 
 
   .browse-div{
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
+  }
+
+  .underline{
+    background-color: #00C030;
+    width: 220px;
+    height: 3px;
+    margin-left: 20px;
   }

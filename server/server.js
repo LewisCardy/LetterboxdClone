@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+
 //middleware
 const multipart = require('connect-multiparty');
 const multipartMiddleware = multipart({
@@ -38,6 +41,17 @@ app.post('/api/thumbnail-upload', multipartMiddleware,(req, res) => {
     console.log(req.files.file.path);
 });
 
-app.listen(8080, () => {
-    console.log('Server listening on port 8080');
-});
+const start = async() => {
+    try{
+        await mongoose.connect('mongodb+srv://lewiscardy2:KQi8aYrdGnkpQZIa@letterboxdstats.wob7t1b.mongodb.net/?retryWrites=true&w=majority');
+
+        app.listen(8080, () => {
+            console.log('Server listening on port 8080');
+        });
+    } catch(e){
+        console.log('Could not connect to database: Message', e.message)
+    };
+    
+};
+
+start();

@@ -3,7 +3,6 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { finalize } from 'rxjs';
 import { Input } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-films-page',
@@ -19,7 +18,7 @@ export class FilmsPageComponent {
     uploadSub: Subscription;
     file:File;
 
-    constructor(private http: HttpClient, private dialog: MatDialog) {}
+    constructor(private http: HttpClient) {}
 
     onFileSelected(event) {
         this.file = event.target.files[0];
