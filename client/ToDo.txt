@@ -2,6 +2,12 @@ List of things that need completed/rough notes for features
 
 checks if the server can be connected to
 
+checks if the file has already been uploaded so duplicate data cant be used
+
+create a component for each graph.
+
+possible create a component for file upload but only if you can change the expected file within the parent component
+
 For the films section using ratings.csv
 Time Series Line Chart (Cumulative Movies Watched Over Time): Months on Y axis and number of movies watched per month on X axis (Current Year only?)
 Bar Chart (Movies Watched by Year): number of movies watched per Year

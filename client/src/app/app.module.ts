@@ -20,7 +20,7 @@ import { ActorsPageComponent } from './actors-page/actors-page.component';
 import { DirectorsPageComponent } from './directors-page/directors-page.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDividerModule,
     MatListModule,
     MatProgressBarModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
