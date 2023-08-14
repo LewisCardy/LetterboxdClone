@@ -33,14 +33,22 @@ export class FilmsPageComponent {
     onFileUpload(){
       if (this.file.name == 'ratings.csv') {
         const formData = new FormData();
-        formData.append("file", this.file);
+        formData.append("watchlistFile", this.file);
         console.log(this.file)
-        this.http.post("http://localhost:8080/api/thumbnail-upload", formData).subscribe((response)=>{
+        this.http.post("http://localhost:8080/films-watched/upload", formData).subscribe((res)=>{
           console.log("File Uploaded")
         });
+      } else {
+        console.log('Incorrect File')
+      }
+    }
 
-    } else {
-      console.log('Incorrect File')
+    getFilmsWatchedData(){
+      this.http.get('http://localhost:8080/films-watched/filmsWatched').subscribe(res => {
+        const filmsWatched = res;
+        console.log(filmsWatched)
+    });
+      
     }
-    }
+    
 }

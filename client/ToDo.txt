@@ -1,11 +1,10 @@
 List of things that need completed/rough notes for features
 
-Fix the css for the pages, possibly center the file input and general cleanup to make it 1 file that can get loaded rather than a seperate one for each website page
-
-MongoDB functionality
-
-Home page - a page explaining the app and 3 cards with images showing users how to get their own letterboxd data.
-
-appropiate error handling on the file uploads
-
 checks if the server can be connected to
+
+For the films section using ratings.csv
+Time Series Line Chart (Cumulative Movies Watched Over Time): Months on Y axis and number of movies watched per month on X axis (Current Year only?)
+Bar Chart (Movies Watched by Year): number of movies watched per Year
+Ratings histogram: distrobution of ratings. rating on x axis and mumber of times giving the rating on the Y
+Line Chart (Rating Trend Over Months):
+line chart with the x-axis representing months and the y-axis representing the average rating for each month.
