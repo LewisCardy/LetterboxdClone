@@ -1,35 +1,50 @@
 <div class="main-container" id="main-div">
     <h2 class="title">Ratings Data</h2>
     <div class="underline"></div>
-        <div class="file-upload-container">
-            <div class="file-upload ">
-                <div class="description-text">Select ratings.csv from downloaded Letterboxd account export</div>
-                <div class="browse-div">
-                    <button mat-raised-button color="primary" class="browse-btn"
-                        (click)="fileSelect.click()"> Browse
-                    </button>
-                    <p id="fileName">{{fileName || "No file uploaded yet."}}</p>
-                    <div>
-                        <button mat-raised-button color="primary" class="upload-btn"
-                            (click)="onFileUpload()"> Upload
-                        </button>
-                    </div>
-                </div>
-                <button mat-raised-button color="primary" class="upload-btn"
-                    (click)="getFilmsWatchedData()"> Get Watched Data
+    <div class="file-upload-container">
+        <div class="file-upload ">
+            <div class="description-text">Select ratings.csv from downloaded Letterboxd account export</div>
+            <div class="browse-div">
+                <button mat-raised-button color="primary" class="browse-btn"
+                    (click)="fileSelect.click()"> Browse
                 </button>
+                <p id="fileName">{{fileName || "No file uploaded yet."}}</p>
+                <div>
+                    <button mat-raised-button color="primary" class="upload-btn"
+                        (click)="onFileUpload()"> Upload
+                    </button>
+                </div>
             </div>
-
-            <div *ngIf="showChart">
+            <button mat-raised-button color="primary" class="upload-btn"
+                (click)="getFilmsWatchedData()"> Get Watched Data
+            </button>
+        </div>
+    </div>
+        <button mat-raised-button color="primary" class="upload-btn"
+                (click)="filmByYearBarChart(filmsWatched)"> Films By Year Released
+            </button>
+            <button mat-raised-button color="primary" class="upload-btn"
+                (click)="filmByMonthChart(filmsWatched)"> Films By Month
+            </button>
+            <div *ngIf="showFilmsPerYearChart">
                 <canvas baseChart
-                    [data]="barChartData"
-                    [options]="barChartOptions"
-                    [plugins]="barChartPlugins"
-                    [legend]="barChartLegend"
+                    [data]="filmsPerYearChartData"
+                    [options]="filmsPerYearChartOptions"
+                    [plugins]="filmsPerYearChartPlugins"
+                    [legend]="filmsPerYearChartLegend"
                     [type]="'bar'">
                 </canvas>
             </div>
-        </div>
+            <div *ngIf="showFilmsPerMonthChart">
+                <canvas baseChart
+                    [data]="filmsPerMonthChartData"
+                    [options]="filmsPerMonthChartOptions"
+                    [plugins]="filmsPerMonthChartPlugins"
+                    [legend]="filmsPerMonthChartLegend"
+                    [type]="'line'">
+                </canvas>
+            </div>
     </div>
+    
 
 <input type="file" class="file-input" accept=".csv" (change)="onFileSelected($event)" #fileSelect>
